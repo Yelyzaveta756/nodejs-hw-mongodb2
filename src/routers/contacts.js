@@ -7,10 +7,10 @@ import { getAllContactsController,
          deleteContactController
 } from "../controllers/contacts.js";
 
-export const studentRouter = Router();
+export const contactRouter = Router();
 
-studentRouter.get('/contacts', ctrlWrapper(getAllContactsController));
-studentRouter.get('/contacts/:contactId', ctrlWrapper(getContactByIdController));
-studentRouter.post('/contacts', ctrlWrapper(createContactController));
-studentRouter.patch('/contacts/:contactId', ctrlWrapper(patchContactController));
-studentRouter.delete('/contacts/:contactId', ctrlWrapper(deleteContactController));
+contactRouter.get('/contacts', ctrlWrapper(getAllContactsController));
+contactRouter.get('/contacts/:contactId', ctrlWrapper(getContactByIdController));
+contactRouter.post('/contacts', ctrlWrapper(createContactController));
+contactRouter.patch('/contacts/:contactId', ctrlWrapper(patchContactController));
+contactRouter.delete('/contacts/:contactId', ctrlWrapper(deleteContactController));

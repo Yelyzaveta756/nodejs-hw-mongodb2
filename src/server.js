@@ -4,7 +4,7 @@ import { errorHandler } from './middlewares/errorHandler.js';
 import { notFoundHandler } from './middlewares/notFoundHandler.js';
 import { logger } from './middlewares/logger.js';
 import { env } from './utils/env.js';
-import { studentRouter } from './routers/contacts.js';
+import { contactRouter } from './routers/contacts.js';
 
 export default function setupServer(){
     const app = express();
@@ -14,7 +14,7 @@ export default function setupServer(){
     app.use(logger);
     app.use(express.json());
 
-    app.use(studentRouter);
+    app.use(contactRouter);
 
     app.use('*', notFoundHandler);
 

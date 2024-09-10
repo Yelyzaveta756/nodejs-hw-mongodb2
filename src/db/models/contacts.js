@@ -26,6 +26,7 @@ import { model, Schema } from "mongoose";
  },
     {
         timestamps: true,
+        versionKey: false,
     },
 );
 

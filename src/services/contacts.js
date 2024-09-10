@@ -27,10 +27,9 @@ export const patchContact = async (contactId, payload, options = {}) => {
 
         if (!rawResult || !rawResult.value) return null;
 
-        return {
-          student: rawResult.value,
-          isNew: Boolean(rawResult?.lastErrorObject?.upserted),
-        };
+        return rawResult.value;
+
+
 };
 
 export const deleteContact = async (contactId) => {
